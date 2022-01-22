@@ -10,37 +10,35 @@
 
 
 	<body>
+	
+		<div class="area" >
+					<ul class="circles">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+					</ul>
+			</div >
+
+			<script src="Main.js"></script>
+
 
 		<div class="context">
-			<h1>Pure Css Animated Background</h1>
+
+			<label class="usuario">Usuario</label>
+			<input type="text" id="usuario" class="usuarioInput"></input>
+
+			<label class="bot">bot</label>
+			<label id="bot" class="botOutput">Respuesta</label>
+
+			<button type="button" onclick="reconocerVoz()" >Hablar</button>
 		</div>
-	
-	
-	<div class="area" >
-				<ul class="circles">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-				</ul>
-		</div >
-
-		<script src="Main.js"></script>
-
-		<label class="usuario">Usuario</label>
-		<input type="text" id="usuario" class="usuarioInput"></input>
-
-		<label class="bot">bot</label>
-		<label id="bot" class="botOutput">Respuesta</label>
-
-		<button type="button" onclick="reconocerVoz()" >Hablar</button>
-		<button type="button" onclick="location.href='Main.html'" >Dejar de hablar</button>
 
 	</body>
 </html>
