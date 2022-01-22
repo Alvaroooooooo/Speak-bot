@@ -31,7 +31,7 @@ function iniciar(event){
 	for (let i = event.resultIndex; i < event.results.length; i++){
 
 		var a=event.results[i][0].transcript;
-		document.getElementById('usuario').innerHTML = a;
+		document.getElementById('usuario').value = a;
 	}
 	respuestas(a);
 }
