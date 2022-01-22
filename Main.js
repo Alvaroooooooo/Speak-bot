@@ -33,8 +33,27 @@ function iniciar(event){
 		var a=event.results[i][0].transcript;
 		document.getElementById('usuario').innerHTML = a;
 	}
-	decir(a);
+	respuestas(a);
 }
+
+
+
+function respuestas(a){
+
+	if (a.includes("cómo estás")){
+
+		a="Bien, ¿y tu?";
+		decir(a);
+	}
+	else{
+
+		decir(a);
+	}
+	document.getElementById('bot').innerHTML = a;
+
+}
+
+
 
 
 function decir(a){
