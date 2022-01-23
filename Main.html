@@ -29,15 +29,16 @@
 			<script src="Main.js"></script>
 
 
-		<div class="context">
+		<div class="box">
 
 			<label class="usuario">Usuario</label>
 			<input type="text" id="usuario" class="usuarioInput"></input>
+			<button type="button" onclick="reconocerVoz()" class="grabarVoz">Hablar</button>
+
+			<br>
 
 			<label class="bot">bot</label>
-			<label id="bot" class="botOutput">Respuesta</label>
-
-			<button type="button" onclick="reconocerVoz()" >Hablar</button>
+			<input type="text" id="bot" class="botOutput" readonly></input> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</div>
 
 	</body>

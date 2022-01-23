@@ -49,7 +49,7 @@ function respuestas(a){
 
 		decir(a);
 	}
-	document.getElementById('bot').innerHTML = a;
+	document.getElementById('bot').value = a;
 
 }
 
