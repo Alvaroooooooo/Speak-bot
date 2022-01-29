@@ -14,7 +14,6 @@ function reconocerVoz(){
     	rec.continuous = true;
     	rec.interim = true;
     	rec.addEventListener("result",iniciar);
-		decir();
 
 		rec.start();
 
@@ -33,12 +32,13 @@ function iniciar(event){
 		var a=event.results[i][0].transcript;
 		document.getElementById('usuario').value = a;
 	}
-	respuestas(a);
 }
 
 
 
-function respuestas(a){
+function respuestas(){
+
+	var a=document.getElementById('usuario').value
 
 	if (a.includes("cómo estás")){
 
