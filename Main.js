@@ -30,32 +30,82 @@ function iniciar(event){
 	for (let i = event.resultIndex; i < event.results.length; i++){
 
 		var a=event.results[i][0].transcript;
-		document.getElementById('usuario').value = a;
+		document.getusuarioById('usuario').value = a;
 	}
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
 function respuestas(){
 
-	var a=document.getElementById('usuario').value
+	var dic = {
+		"Bien, ¿y tu?":"cómo estás",
+		"hola":"hola"
+	};
 
-	if (a.includes("cómo estás")){
 
-		a="Bien, ¿y tu?";
-		decir(a);
-	}
-	else{
 
-		decir(a);
-	}
-	document.getElementById('bot').value = a;
 
-}
+
+
+
+
+
+
+
+
+	var keys = Object.keys(dic)
+	var values = Object.values(dic)
+
+	console.log(values)
+
+	var usuario=document.getElementById('usuario').value;
+	
+	for (i=0;i<values.length;i++){
+		console.log(i);
+
+		if (values.includes(usuario)){
+
+			decir(keys[i]);
+			break;
+			
+
+		}
+		else if(usuario=" "){
+
+			break;
+
+		}
+		else{
+			
+			decir("No encuentro respuestas para esa pregunta");
+			break;
+			
+		}
+	
+    }
+
+	
+
+
+
+
+
 
 
 
 
 function decir(a){
     speechSynthesis.speak(new SpeechSynthesisUtterance(a));
+}
 }
