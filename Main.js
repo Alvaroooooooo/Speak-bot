@@ -70,33 +70,27 @@ function respuestas(){
 	console.log(values)
 
 	var usuario=document.getElementById('usuario').value;
+
+	if(!values.includes(usuario)){
+
+		decir("No encuentro respuestas para esa pregunta");
+
+	}
+	else{
 	
-	for (i=0;i<values.length;i++){
-		console.log(i);
+		for (i=0;i<values.length;i++){
+			console.log(i);
 
-		if (values.includes(usuario)){
+			if(usuario.includes(values[i])){
 
-			decir(keys[i]);
-			break;
-			
+				decir(keys[i]);
 
+			}
+				
 		}
-		else if(usuario=" "){
-
-			break;
-
-		}
-		else{
-			
-			decir("No encuentro respuestas para esa pregunta");
-			break;
-			
-		}
+	}
 	
-    }
-
-	
-
+}
 
 
 
@@ -108,4 +102,4 @@ function respuestas(){
 function decir(a){
     speechSynthesis.speak(new SpeechSynthesisUtterance(a));
 }
-}
+
