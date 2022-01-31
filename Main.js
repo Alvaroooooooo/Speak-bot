@@ -67,27 +67,33 @@ function respuestas(){
 	var keys = Object.keys(dic)
 	var values = Object.values(dic)
 
-	console.log(values)
-
 	var usuario=document.getElementById('usuario').value;
 
-	if(!values.includes(usuario)){
+	var cont=0;
 
-		decir("No encuentro respuestas para esa pregunta");
+	for (i=0;i<values.length;i++){
+
+	if(!usuario.includes(values[i])){
+
+		cont += 1;
 
 	}
 	else{
 	
-		for (i=0;i<values.length;i++){
-			console.log(i);
+		
 
 			if(usuario.includes(values[i])){
 
 				decir(keys[i]);
+				break;
 
 			}
 				
 		}
+	}
+
+	if (cont==values.length){
+		decir("No encuentro respuestas para esa pregunta");
 	}
 	
 }
